@@ -29,7 +29,6 @@ cd DAVI
 conda create -n DAVI python==3.8
 conda activate DAVI
 conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=12.1 -c pytorch -c nvidia
-
 ```
 
 ```
@@ -67,7 +66,15 @@ For amortized optimization, we use the FFHQ 49K dataset and the ImageNet 130K da
 
   - `data/y_npy`
 
-  During amortized training, we load a subset of the training set to monitor the convergence of the training process. Prepare measurements from the training set.
+  During amortized training, we load a subset of the training set to monitor the convergence of the training process.
+
+  You can specify degradation types using the `--deg` option.
+
+  - Gaussian Deblur `gaussian`
+  - 4x Super-resolution `sr_averagepooling`
+  - Box inpainting `inpainting`
+  - Denoising `deno`
+  - Colorization `colorization`
 
   ```
   python utils/get_measurements.py --deg gaussian --data_dir data/ffhq_49K
@@ -115,11 +122,11 @@ For amortized optimization, we use the FFHQ 49K dataset and the ImageNet 130K da
 
 ### 1. Restore degraded images
 
+- You can specify the directory of measurements with `--y_dir data/y_npy`
+
 ```
 accelerate launch --num_processes=1 eval.py --eval_dir data/ffhq_1K --deg gaussian --perturb_h 0.1 --ckpt model/official_ckpt/ffhq/gaussian_ema.pt
 ```
-
-- You can specify the directory of measurements with `--y_dir data/y_npy`
 
 ### 2. Evaluate PSNR,LPIPS and FID
 
