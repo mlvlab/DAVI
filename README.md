@@ -4,7 +4,7 @@
 
 Sojin Lee*, Dogyun Park*, Inho Kong, Hyunwoo J. Kim†.
 
-This repository contains the official PyTorch implementation of **_DAVI_**: **D**iffusion Prior-Based **A**mortized **V** ariational **I**nference for Noisy Inverse Problems accepted at **ECCV 2024**.
+This repository contains the official PyTorch implementation of **_DAVI_**: **D**iffusion Prior-Based **A**mortized **V**ariational **I**nference for Noisy Inverse Problems accepted at **ECCV 2024**.
 
 Our framework allows efficient posterior sampling with **a single evaluation of a neural network**, and enables generalization to both seen and unseen measurements without the need for test-time optimization. We provide five image restoration tasks (**Gaussian deblur, 4x Super-resolution, Box inpainting, Denoising, and Colorization**) with two benchmark datasets (FFHQ and ImageNet).
 
