@@ -1,0 +1,20 @@
+data/
+model/
+wandb/
+results/
+
+# *.png
+*.JPEG
+*.jpg
+*.pyc
+*.txt
+*.csv
+*.pt
+*.npy
+
+*.log
+**/__pycache__/
+__pycache__/*
+.cache/*
+.*.swp
+.DS_Store
