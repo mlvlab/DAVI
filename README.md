@@ -1,10 +1,18 @@
-# DAVI: Diffusion Prior-Based Amortized Variational Inference for Noisy Inverse Problems
+<p align="center">
+  <h1 align="center">Diffusion Prior-Based Amortized Variational Inference for Noisy Inverse Problems</h1>
+  
+  <p align="center">Sojin Lee*, Dogyun Park*, Inho Kong, Hyunwoo J. Kim†.
+  </p>
+  <h2 align="center">ECCV 2024 Oral</h2>
 
-<!-- ** [Paper] ()** -->
+  <h3 align="center">
+    <a href="https://mlvlab.github.io/DAVI-project/" target='_blank'><img src="https://img.shields.io/badge/🐳-Project%20Page-blue"></a>
+    <a href="https://www.arxiv.org/pdf/2407.16125" target='_blank'><img src="https://img.shields.io/badge/arXiv-2407.16125-b31b1b.svg"></a>
+  </h3>
 
-Sojin Lee*, Dogyun Park*, Inho Kong, Hyunwoo J. Kim†.
+</p>
 
-This repository contains the official PyTorch implementation of **_DAVI_**: **D**iffusion Prior-Based **A**mortized **V**ariational **I**nference for Noisy Inverse Problems accepted at **ECCV 2024**.
+This repository contains the official PyTorch implementation of **_DAVI_**: **D**iffusion Prior-Based **A**mortized **V**ariational **I**nference for Noisy Inverse Problems accepted at **ECCV 2024 as an oral presentation.**
 
 Our framework allows efficient posterior sampling with **a single evaluation of a neural network**, and enables generalization to both seen and unseen measurements without the need for test-time optimization. We provide five image restoration tasks (**Gaussian deblur, 4x Super-resolution, Box inpainting, Denoising, and Colorization**) with two benchmark datasets (FFHQ and ImageNet).
 
